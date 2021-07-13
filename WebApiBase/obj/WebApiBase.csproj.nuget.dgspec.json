@@ -62,6 +62,10 @@
               "target": "Package",
               "version": "[2.5.200, )"
             },
+            "FreeSql.Provider.Sqlite": {
+              "target": "Package",
+              "version": "[2.5.200, )"
+            },
             "FreeSql.Repository": {
               "target": "Package",
               "version": "[2.5.200, )"

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "fl9Uj9LdMMqL+Yb7bnj3TS93J6+FQ2ZgyzxqvQcxtnJ7hpSzBSayEKEoRj5Oh2dHwUlygBJr+02LtwVqxs/DTA==",
+  "dgSpecHash": "jvQKqyvVic1lmpiaojI9Xa+AtLF4ixcwj+jKk30TYXa2S2m0xac+mLbCDeXJRr2yeyKiJlZJBVpAGWJ5Zmeu5Q==",
   "success": true,
   "projectFilePath": "F:\\C#代码\\WebApiBase\\WebApiBase\\WebApiBase.csproj",
   "expectedPackageFiles": [
@@ -12,6 +12,7 @@
     "C:\\Users\\User\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\freesql\\2.5.200\\freesql.2.5.200.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\freesql.dbcontext\\2.5.200\\freesql.dbcontext.2.5.200.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\freesql.provider.sqlite\\2.5.200\\freesql.provider.sqlite.2.5.200.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\freesql.provider.sqlserver\\2.5.200\\freesql.provider.sqlserver.2.5.200.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\freesql.repository\\2.5.200\\freesql.repository.2.5.200.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\identitymodel\\5.1.0\\identitymodel.5.1.0.nupkg.sha512",
@@ -65,6 +66,7 @@
     "C:\\Users\\User\\.nuget\\packages\\runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\stub.system.data.sqlite.core.netstandard\\1.0.113.2\\stub.system.data.sqlite.core.netstandard.1.0.113.2.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.6.3\\swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
@@ -80,6 +82,7 @@
     "C:\\Users\\User\\.nuget\\packages\\system.componentmodel.typeconverter\\4.3.0\\system.componentmodel.typeconverter.4.3.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\system.configuration.configurationmanager\\4.7.0\\system.configuration.configurationmanager.4.7.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\system.console\\4.3.0\\system.console.4.3.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\system.data.sqlite.core\\1.0.113.7\\system.data.sqlite.core.1.0.113.7.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\system.diagnostics.debug\\4.3.0\\system.diagnostics.debug.4.3.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.7.1\\system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\system.diagnostics.tools\\4.3.0\\system.diagnostics.tools.4.3.0.nupkg.sha512",
