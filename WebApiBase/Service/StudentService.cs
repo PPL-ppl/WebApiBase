@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using AutoMapper;
+using FreeSql;
 using WebApiBase.AutoMapper;
 using WebApiBase.Common;
 using WebApiBase.DTO;
@@ -39,6 +40,12 @@ namespace WebApiBase.Service
         {
             long one = _studentRepository.InsertOne(studentModel);
             return one;
+        }
+
+        public StudentModel Insert(StudentModel studentModel)
+        {
+            StudentModel model = _studentRepository.Insert(studentModel);
+            return model;
         }
     }
 }

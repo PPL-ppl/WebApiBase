@@ -8,7 +8,6 @@ namespace WebApiBase.AutoMapper
     {
         public SessionProfile()
         {
-
         }
     }
 }

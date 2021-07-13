@@ -97,17 +97,17 @@
           "lib/netstandard2.0/FreeSql.dll": {}
         }
       },
-      "FreeSql.Provider.Sqlite/2.5.200": {
+      "FreeSql.DbContext/2.5.200": {
         "type": "package",
         "dependencies": {
           "FreeSql": "2.5.200",
-          "System.Data.SQLite.Core": "1.0.113.7"
+          "Microsoft.Extensions.DependencyInjection": "5.0.0"
         },
         "compile": {
-          "lib/netstandard2.0/FreeSql.Provider.Sqlite.dll": {}
+          "lib/net5.0/FreeSql.DbContext.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/FreeSql.Provider.Sqlite.dll": {}
+          "lib/net5.0/FreeSql.DbContext.dll": {}
         }
       },
       "FreeSql.Provider.SqlServer/2.5.200": {
@@ -121,6 +121,18 @@
         },
         "runtime": {
           "lib/net5.0/FreeSql.Provider.SqlServer.dll": {}
+        }
+      },
+      "FreeSql.Repository/2.5.200": {
+        "type": "package",
+        "dependencies": {
+          "FreeSql.DbContext": "2.5.200"
+        },
+        "compile": {
+          "lib/net5.0/FreeSql.Repository.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/FreeSql.Repository.dll": {}
         }
       },
       "IdentityModel/5.1.0": {
@@ -312,6 +324,18 @@
         },
         "runtime": {
           "lib/netstandard2.1/Microsoft.Extensions.Configuration.Json.dll": {}
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection/5.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "5.0.0"
+        },
+        "compile": {
+          "lib/net5.0/Microsoft.Extensions.DependencyInjection.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/Microsoft.Extensions.DependencyInjection.dll": {}
         }
       },
       "Microsoft.Extensions.DependencyInjection.Abstractions/5.0.0": {
@@ -767,33 +791,6 @@
           }
         }
       },
-      "Stub.System.Data.SQLite.Core.NetStandard/1.0.113.2": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.1/System.Data.SQLite.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.1/System.Data.SQLite.dll": {}
-        },
-        "runtimeTargets": {
-          "runtimes/linux-x64/native/SQLite.Interop.dll": {
-            "assetType": "native",
-            "rid": "linux-x64"
-          },
-          "runtimes/osx-x64/native/SQLite.Interop.dll": {
-            "assetType": "native",
-            "rid": "osx-x64"
-          },
-          "runtimes/win-x64/native/SQLite.Interop.dll": {
-            "assetType": "native",
-            "rid": "win-x64"
-          },
-          "runtimes/win-x86/native/SQLite.Interop.dll": {
-            "assetType": "native",
-            "rid": "win-x86"
-          }
-        }
-      },
       "Swashbuckle.AspNetCore/5.6.3": {
         "type": "package",
         "dependencies": {
@@ -1019,12 +1016,6 @@
         },
         "compile": {
           "ref/netstandard1.3/System.Console.dll": {}
-        }
-      },
-      "System.Data.SQLite.Core/1.0.113.7": {
-        "type": "package",
-        "dependencies": {
-          "Stub.System.Data.SQLite.Core.NetStandard": "1.0.113.2"
         }
       },
       "System.Diagnostics.Debug/4.3.0": {
@@ -2241,18 +2232,27 @@
         "logo.png"
       ]
     },
-    "FreeSql.Provider.Sqlite/2.5.200": {
-      "sha512": "82D1MDDdLX7Xsds0mQ0ZAr73uklL20eAT5xVMnTbouqoPz7p58ma3yR5L8+TbjkJ4ytsbW6w2csL2B+MR0IvCg==",
+    "FreeSql.DbContext/2.5.200": {
+      "sha512": "07OFFm6RjL/WWgf2GLIhnNO3F5wQIwYg7mCsWpDlLkvTmLjqzRUAtnvwXjhV1ZXeV3HPQJvtQ822cDTaR9BHtg==",
       "type": "package",
-      "path": "freesql.provider.sqlite/2.5.200",
+      "path": "freesql.dbcontext/2.5.200",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "freesql.provider.sqlite.2.5.200.nupkg.sha512",
-        "freesql.provider.sqlite.nuspec",
-        "lib/net40/FreeSql.Provider.Sqlite.dll",
-        "lib/net45/FreeSql.Provider.Sqlite.dll",
-        "lib/netstandard2.0/FreeSql.Provider.Sqlite.dll",
+        "freesql.dbcontext.2.5.200.nupkg.sha512",
+        "freesql.dbcontext.nuspec",
+        "lib/net40/FreeSql.DbContext.dll",
+        "lib/net40/FreeSql.DbContext.xml",
+        "lib/net45/FreeSql.DbContext.dll",
+        "lib/net45/FreeSql.DbContext.xml",
+        "lib/net5.0/FreeSql.DbContext.dll",
+        "lib/net5.0/FreeSql.DbContext.xml",
+        "lib/netcoreapp2.1/FreeSql.DbContext.dll",
+        "lib/netcoreapp2.1/FreeSql.DbContext.xml",
+        "lib/netcoreapp3.1/FreeSql.DbContext.dll",
+        "lib/netcoreapp3.1/FreeSql.DbContext.xml",
+        "lib/netstandard2.0/FreeSql.DbContext.dll",
+        "lib/netstandard2.0/FreeSql.DbContext.xml",
         "logo.png"
       ]
     },
@@ -2270,6 +2270,24 @@
         "lib/net451/FreeSql.Provider.SqlServer.dll",
         "lib/net5.0/FreeSql.Provider.SqlServer.dll",
         "lib/netstandard2.0/FreeSql.Provider.SqlServer.dll",
+        "logo.png"
+      ]
+    },
+    "FreeSql.Repository/2.5.200": {
+      "sha512": "AZQfHWebUCJb8PW12upK61e0f3dVoazCz4X+li48QWmLawsyWiqDaJv+91M69JpXrimHae4fsHwO7iRgMYF6/w==",
+      "type": "package",
+      "path": "freesql.repository/2.5.200",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "freesql.repository.2.5.200.nupkg.sha512",
+        "freesql.repository.nuspec",
+        "lib/net40/FreeSql.Repository.dll",
+        "lib/net45/FreeSql.Repository.dll",
+        "lib/net5.0/FreeSql.Repository.dll",
+        "lib/netcoreapp2.1/FreeSql.Repository.dll",
+        "lib/netcoreapp3.1/FreeSql.Repository.dll",
+        "lib/netstandard2.0/FreeSql.Repository.dll",
         "logo.png"
       ]
     },
@@ -2631,6 +2649,30 @@
         "lib/netstandard2.1/Microsoft.Extensions.Configuration.Json.xml",
         "microsoft.extensions.configuration.json.5.0.0.nupkg.sha512",
         "microsoft.extensions.configuration.json.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "Microsoft.Extensions.DependencyInjection/5.0.0": {
+      "sha512": "Rc2kb/p3Ze6cP6rhFC3PJRdWGbLvSHZc0ev7YlyeU6FmHciDMLrhoVoTUEzKPhN5ZjFgKF1Cf5fOz8mCMIkvpA==",
+      "type": "package",
+      "path": "microsoft.extensions.dependencyinjection/5.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/Microsoft.Extensions.DependencyInjection.dll",
+        "lib/net461/Microsoft.Extensions.DependencyInjection.xml",
+        "lib/net5.0/Microsoft.Extensions.DependencyInjection.dll",
+        "lib/net5.0/Microsoft.Extensions.DependencyInjection.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.xml",
+        "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.dll",
+        "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.xml",
+        "microsoft.extensions.dependencyinjection.5.0.0.nupkg.sha512",
+        "microsoft.extensions.dependencyinjection.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
@@ -3339,27 +3381,6 @@
         "runtimes/ubuntu.16.10-x64/native/System.Security.Cryptography.Native.OpenSsl.so"
       ]
     },
-    "Stub.System.Data.SQLite.Core.NetStandard/1.0.113.2": {
-      "sha512": "yGIM9xFyPHl79HluNTSQarvAOIJ68pmzmlMayVN6Nivu/7TiaHt7WqptolvwmuKdAXei8OzENh9RNdh7d6evjQ==",
-      "type": "package",
-      "path": "stub.system.data.sqlite.core.netstandard/1.0.113.2",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/netstandard2.0/System.Data.SQLite.dll",
-        "lib/netstandard2.0/System.Data.SQLite.dll.altconfig",
-        "lib/netstandard2.0/System.Data.SQLite.xml",
-        "lib/netstandard2.1/System.Data.SQLite.dll",
-        "lib/netstandard2.1/System.Data.SQLite.dll.altconfig",
-        "lib/netstandard2.1/System.Data.SQLite.xml",
-        "runtimes/linux-x64/native/SQLite.Interop.dll",
-        "runtimes/osx-x64/native/SQLite.Interop.dll",
-        "runtimes/win-x64/native/SQLite.Interop.dll",
-        "runtimes/win-x86/native/SQLite.Interop.dll",
-        "stub.system.data.sqlite.core.netstandard.1.0.113.2.nupkg.sha512",
-        "stub.system.data.sqlite.core.netstandard.nuspec"
-      ]
-    },
     "Swashbuckle.AspNetCore/5.6.3": {
       "sha512": "UkL9GU0mfaA+7RwYjEaBFvAzL8qNQhNqAeV5uaWUu/Z+fVgvK9FHkGCpTXBqSQeIHuZaIElzxnLDdIqGzuCnVg==",
       "type": "package",
@@ -3917,17 +3938,6 @@
         "ref/xamarinwatchos10/_._",
         "system.console.4.3.0.nupkg.sha512",
         "system.console.nuspec"
-      ]
-    },
-    "System.Data.SQLite.Core/1.0.113.7": {
-      "sha512": "2DKMIxfZpIVzdMfx1dj9qvTm+0m0Mx6sN6CZXMQDNytU7Sk/JKo0Ox6mvHAicfHrQgqZbUZMzMMtLXD0kwmFfg==",
-      "type": "package",
-      "path": "system.data.sqlite.core/1.0.113.7",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "system.data.sqlite.core.1.0.113.7.nupkg.sha512",
-        "system.data.sqlite.core.nuspec"
       ]
     },
     "System.Diagnostics.Debug/4.3.0": {
@@ -7241,7 +7251,7 @@
       "Autofac.Extras.DynamicProxy >= 6.0.0",
       "FreeSql >= 2.5.200",
       "FreeSql.Provider.SqlServer >= 2.5.200",
-      "FreeSql.Provider.Sqlite >= 2.5.200",
+      "FreeSql.Repository >= 2.5.200",
       "IdentityModel >= 5.1.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 5.0.7",
       "Microsoft.AspNetCore.Authorization >= 5.0.7",
@@ -7313,7 +7323,7 @@
             "target": "Package",
             "version": "[2.5.200, )"
           },
-          "FreeSql.Provider.Sqlite": {
+          "FreeSql.Repository": {
             "target": "Package",
             "version": "[2.5.200, )"
           },

@@ -8,5 +8,6 @@ namespace WebApiBase.IService
     {
         List<StudentDTO> FindAll();
         long InsertOne(StudentModel studentModel);
+        StudentModel Insert(StudentModel studentModel);
     }
 }

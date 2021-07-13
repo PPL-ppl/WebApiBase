@@ -49,13 +49,7 @@ F:\C#代码\WebApiBase\WebApiBase\bin\Debug\net5.0\runtimes\win-x64\native\Micro
 F:\C#代码\WebApiBase\WebApiBase\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
 F:\C#代码\WebApiBase\WebApiBase\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 F:\C#代码\WebApiBase\WebApiBase\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-F:\C#代码\WebApiBase\WebApiBase\bin\Debug\net5.0\FreeSql.Provider.Sqlite.dll
 F:\C#代码\WebApiBase\WebApiBase\bin\Debug\net5.0\FreeSql.Provider.SqlServer.dll
-F:\C#代码\WebApiBase\WebApiBase\bin\Debug\net5.0\System.Data.SQLite.dll
-F:\C#代码\WebApiBase\WebApiBase\bin\Debug\net5.0\runtimes\linux-x64\native\SQLite.Interop.dll
-F:\C#代码\WebApiBase\WebApiBase\bin\Debug\net5.0\runtimes\osx-x64\native\SQLite.Interop.dll
-F:\C#代码\WebApiBase\WebApiBase\bin\Debug\net5.0\runtimes\win-x64\native\SQLite.Interop.dll
-F:\C#代码\WebApiBase\WebApiBase\bin\Debug\net5.0\runtimes\win-x86\native\SQLite.Interop.dll
 F:\C#代码\WebApiBase\WebApiBase\bin\Debug\net5.0\IdentityModel.dll
 F:\C#代码\WebApiBase\WebApiBase\bin\Debug\net5.0\Microsoft.AspNetCore.Authorization.dll
 F:\C#代码\WebApiBase\WebApiBase\bin\Debug\net5.0\Microsoft.AspNetCore.Metadata.dll
@@ -67,3 +61,5 @@ F:\C#代码\WebApiBase\WebApiBase\bin\Debug\net5.0\Autofac.Extras.DynamicProxy.d
 F:\C#代码\WebApiBase\WebApiBase\bin\Debug\net5.0\Castle.Core.dll
 F:\C#代码\WebApiBase\WebApiBase\bin\Debug\net5.0\AutoMapper.dll
 F:\C#代码\WebApiBase\WebApiBase\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+F:\C#代码\WebApiBase\WebApiBase\bin\Debug\net5.0\FreeSql.DbContext.dll
+F:\C#代码\WebApiBase\WebApiBase\bin\Debug\net5.0\FreeSql.Repository.dll

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using FreeSql;
 using WebApiBase.Model;
 
 namespace WebApiBase.IRepository

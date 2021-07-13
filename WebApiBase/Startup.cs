@@ -24,7 +24,6 @@ namespace WebApiBase
         {
             Configuration = configuration;
         }
-
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
@@ -34,7 +33,9 @@ namespace WebApiBase
             services.AddSingleton(new AppSettings(Configuration));
             //注册FreeSql
             services.AddSingleton<IFreeSql>(new FreeSqlHelper().Freesql());
-
+            //FreeSql仓储模式 提供CURD接口
+            services.AddFreeRepository();
+            
             services.AddControllers();
             //Swagger配置
             services.AddSwaggerGen(c =>

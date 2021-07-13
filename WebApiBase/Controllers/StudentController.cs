@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using WebApiBase.Common;
 using WebApiBase.DTO;
+using WebApiBase.IService;
 using WebApiBase.Model;
 using WebApiBase.Service;
 
@@ -13,15 +14,15 @@ namespace WebApiBase.Controllers
     {
         private readonly StudentService _service;
 
-        public StudentController(StudentService studentService)
+        public StudentController(StudentService studentServiceService)
         {
-            _service = studentService;
+            _service = studentServiceService;
         }
 
         [HttpGet]
         public string AHello()
         {
-            List<StudentDTO>   studentDto = _service.FindAll();
+            List<StudentDTO> studentDto = _service.FindAll();
             return Newtonsoft.Json.JsonConvert.SerializeObject(studentDto);
         }
 
@@ -30,6 +31,13 @@ namespace WebApiBase.Controllers
         {
             long one = _service.InsertOne(studentModel);
             return one;
+        }
+
+        [HttpPost]
+        public String InsertModel(StudentModel studentModel)
+        {
+            StudentModel model = _service.Insert(studentModel);
+            return Newtonsoft.Json.JsonConvert.SerializeObject(model);
         }
 
         [HttpDelete]
