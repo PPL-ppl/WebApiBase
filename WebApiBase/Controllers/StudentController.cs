@@ -41,7 +41,7 @@ namespace WebApiBase.Controllers
         }
 
         [HttpDelete]
-        public long AHello(int id)
+        public long AHello(int id,string name)
         {
             return id;
         }
