@@ -20,7 +20,7 @@ namespace WebApiBase.Controllers
         }
 
         [HttpGet]
-        public string AHello()
+        public string FindAll()
         {
             List<StudentDTO> studentDto = _service.FindAll();
             return Newtonsoft.Json.JsonConvert.SerializeObject(studentDto);
@@ -45,5 +45,6 @@ namespace WebApiBase.Controllers
         {
             return id;
         }
+        
     }
 }
