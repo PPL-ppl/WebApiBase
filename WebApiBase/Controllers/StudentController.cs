@@ -43,7 +43,7 @@ namespace WebApiBase.Controllers
         [HttpDelete]
         public long AHello(int id,string name)
         {
-            Console.WriteLine();
+
             return id;
         }
         
