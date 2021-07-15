@@ -47,5 +47,11 @@ namespace WebApiBase.Service
             StudentModel model = _studentRepository.Insert(studentModel);
             return model;
         }
+
+        public int DeleteById(int id)
+        {
+            int delete = _studentRepository.Delete(id);
+            return delete;
+        }
     }
 }

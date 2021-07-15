@@ -40,10 +40,10 @@ namespace WebApiBase.Controllers
         }
 
         [HttpDelete]
-        public long AHello(int id,string name)
+        public int DeleteById(int id)
         {
-            return id;
+            int delete = _service.DeleteById(id);
+            return delete;
         }
-        
     }
 }
