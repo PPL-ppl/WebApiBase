@@ -24,6 +24,7 @@ namespace WebApiBase
         {
             Configuration = configuration;
         }
+
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
@@ -35,7 +36,7 @@ namespace WebApiBase
             services.AddSingleton<IFreeSql>(new FreeSqlHelper().Freesql());
             //FreeSql仓储模式 提供CURD接口
             services.AddFreeRepository();
-            
+
             services.AddControllers();
             //Swagger配置
             services.AddSwaggerGen(c =>
@@ -44,6 +45,11 @@ namespace WebApiBase
                 c.OrderActionsBy(o => o.RelativePath);
             });
             services.AddAutoMapper(typeof(Startup));
+            //添加cors 服务
+            services.AddCors(options =>
+                options.AddPolicy(AppSettings.app(new string[] {"AppSettings", "Cors", "Name"}),
+                    p => p.WithOrigins(AppSettings.app(new string[] {"AppSettings", "Cors", "Original"}))
+                        .AllowAnyMethod().AllowAnyHeader()));
             /*services.AddSingleton<StudentService>();
             services.AddSingleton<StudentRepository>();*/
         }
@@ -65,6 +71,7 @@ namespace WebApiBase
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "WebApiBase v1"));
             }
 
+            app.UseCors(AppSettings.app(new string[] {"AppSettings", "Cors", "Name"}));
             app.UseHttpsRedirection();
 
             app.UseRouting();

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using WebApiBase.Common;
 using WebApiBase.DTO;
-using WebApiBase.IService;
 using WebApiBase.Model;
 using WebApiBase.Service;
 
