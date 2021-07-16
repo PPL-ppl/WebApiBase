@@ -12,17 +12,22 @@ namespace WebApiBase.Controllers
     public class StudentController : BaseController
     {
         private readonly StudentService _service;
+        private readonly Message _message;
 
-        public StudentController(StudentService studentServiceService)
+        public StudentController(StudentService studentServiceService, Message message)
         {
             _service = studentServiceService;
+            _message = message;
         }
 
         [HttpGet]
         public string FindAll()
         {
             List<StudentDTO> studentDto = _service.FindAll();
-            return Newtonsoft.Json.JsonConvert.SerializeObject(studentDto);
+            _message.code = true;
+            _message.msg = "";
+            _message.data = studentDto;
+            return JsonHelper.toJson(_message);
         }
 
         [HttpPost]
@@ -33,10 +38,10 @@ namespace WebApiBase.Controllers
         }
 
         [HttpPost]
-        public String InsertModel(StudentModel studentModel)
+        public String InsertStudent(StudentModel studentModel)
         {
             StudentModel model = _service.Insert(studentModel);
-            return Newtonsoft.Json.JsonConvert.SerializeObject(model);
+            return JsonHelper.toJson(model);
         }
 
         [HttpDelete]

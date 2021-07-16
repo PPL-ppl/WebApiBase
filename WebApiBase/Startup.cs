@@ -50,6 +50,8 @@ namespace WebApiBase
                 options.AddPolicy(AppSettings.app(new string[] {"AppSettings", "Cors", "Name"}),
                     p => p.WithOrigins(AppSettings.app(new string[] {"AppSettings", "Cors", "Original"}))
                         .AllowAnyMethod().AllowAnyHeader()));
+            //注入Message类
+            services.AddSingleton<Message>();
             /*services.AddSingleton<StudentService>();
             services.AddSingleton<StudentRepository>();*/
         }
