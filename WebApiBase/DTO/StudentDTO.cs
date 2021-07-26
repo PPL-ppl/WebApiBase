@@ -1,11 +1,12 @@
-﻿using WebApiBase.Common;
+﻿using System.ComponentModel.DataAnnotations;
+using WebApiBase.Common;
 using WebApiBase.Model;
 
 namespace WebApiBase.DTO
 {
     public class StudentDTO
     {
-        public int id { get; set; }
+        [Required] public int id { get; set; }
         public string name { get; set; }
     }
 }

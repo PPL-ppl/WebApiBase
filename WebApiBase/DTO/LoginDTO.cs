@@ -2,7 +2,7 @@
 
 namespace WebApiBase.DTO
 {
-    public class SessionDTO
+    public class LoginDTO
     {
         [Required] 
         public string Email { get; set; }

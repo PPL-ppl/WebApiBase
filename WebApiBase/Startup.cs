@@ -1,15 +1,18 @@
 using System;
 using System.Linq;
 using System.Reflection;
+using System.Text;
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using Autofac.Extras.DynamicProxy;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using WebApiBase.Common;
 using WebApiBase.Model;
@@ -30,6 +33,20 @@ namespace WebApiBase
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
+            {
+                var secretByte =
+                    Encoding.UTF8.GetBytes(AppSettings.app(new string[] {"AppSettings", "JwtSetting", "SecretKey"}));
+                options.TokenValidationParameters = new TokenValidationParameters()
+                {
+                    ValidateIssuer = true,
+                    ValidIssuer = AppSettings.app(new string[] {"AppSettings", "JwtSetting", "issuer"}),
+                    ValidateAudience = true,
+                    ValidAudience = AppSettings.app(new string[] {"AppSettings", "JwtSetting", "audience"}),
+                    ValidateLifetime = true,
+                    IssuerSigningKey = new SymmetricSecurityKey(secretByte)
+                };
+            });
             //注册appsettings读取类
             services.AddSingleton(new AppSettings(Configuration));
             //注册FreeSql
@@ -75,9 +92,11 @@ namespace WebApiBase
 
             app.UseCors(AppSettings.app(new string[] {"AppSettings", "Cors", "Name"}));
             app.UseHttpsRedirection();
-
+            //路由
             app.UseRouting();
-
+            //认证
+            app.UseAuthentication();
+            //授权
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
