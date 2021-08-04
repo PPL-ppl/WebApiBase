@@ -1,10 +1,9 @@
-﻿using System.ComponentModel.DataAnnotations;
-using FreeSql.DataAnnotations;
+﻿using FreeSql.DataAnnotations;
 
 namespace WebApiBase.Model
 {
     [Table(Name = "student_model")]
-    public class StudentModel
+    public class AExampleModel
     {
        
         public int UUID { get; set; }
