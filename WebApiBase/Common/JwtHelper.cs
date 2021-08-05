@@ -19,9 +19,9 @@ namespace WebApiBase.Common
         public static string IssueJwt(TokenModel tokenModel)
         {
             //获取Appsetting配置
-            string iss = AppSettings.app(new string[] {"AppSettings", "JwtSetting", "Issuer"});
-            string aud = AppSettings.app(new string[] {"AppSettings", "JwtSetting", "Audience"});
-            string secret = AppSettings.app(new string[] {"AppSettings", "JwtSetting", "SecretKey"});
+            string iss = AppSettings.app(new string[] { "AppSettings", "JwtSetting", "Issuer" });
+            string aud = AppSettings.app(new string[] { "AppSettings", "JwtSetting", "Audience" });
+            string secret = AppSettings.app(new string[] { "AppSettings", "JwtSetting", "SecretKey" });
 
             //var claims = new Claim[] //old
             var claims = new List<Claim>

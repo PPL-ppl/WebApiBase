@@ -16,7 +16,6 @@ namespace WebApiBase.Controllers
         {
             //创建用户名密码
 
-
             //创建JWT
             //header
             string signingAlgorithm = SecurityAlgorithms.HmacSha256;
@@ -29,13 +28,13 @@ namespace WebApiBase.Controllers
 
             //signiture
             var secretByte =
-                Encoding.UTF8.GetBytes(AppSettings.app(new string[] {"AppSettings", "JwtSetting", "SecretKey"}));
+                Encoding.UTF8.GetBytes(AppSettings.app(new string[] { "AppSettings", "JwtSetting", "SecretKey" }));
             var sigIngKey = new SymmetricSecurityKey(secretByte);
             var signingCredentials = new SigningCredentials(sigIngKey, signingAlgorithm);
 
             var token = new JwtSecurityToken(
-                issuer: AppSettings.app(new string[] {"AppSettings", "JwtSetting", "issuer"}),
-                audience: AppSettings.app(new string[] {"AppSettings", "JwtSetting", "audience"}),
+                issuer: AppSettings.app(new string[] { "AppSettings", "JwtSetting", "issuer" }),
+                audience: AppSettings.app(new string[] { "AppSettings", "JwtSetting", "audience" }),
                 claims,
                 notBefore: DateTime.UtcNow,
                 expires: DateTime.UtcNow.AddDays(1),
@@ -65,6 +64,14 @@ namespace WebApiBase.Controllers
                 success = suc,
                 token = jwtStr
             });*/
+        }
+
+
+        [HttpGet]
+        public void hello()
+        {
+            Log4NetLog.WriteInfo("HELLO", true);
+            Console.WriteLine("hello");
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.Extensions.Logging;
 using WebApiBase.IService;
 using WebApiBase.Model;
 using WebApiBase.Repository;

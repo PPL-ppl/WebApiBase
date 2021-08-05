@@ -29,13 +29,13 @@ namespace WebApiBase
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
             {
                 var secretByte =
-                    Encoding.UTF8.GetBytes(AppSettings.app(new string[] {"AppSettings", "JwtSetting", "SecretKey"}));
+                    Encoding.UTF8.GetBytes(AppSettings.app(new string[] { "AppSettings", "JwtSetting", "SecretKey" }));
                 options.TokenValidationParameters = new TokenValidationParameters()
                 {
                     ValidateIssuer = true,
-                    ValidIssuer = AppSettings.app(new string[] {"AppSettings", "JwtSetting", "issuer"}),
+                    ValidIssuer = AppSettings.app(new string[] { "AppSettings", "JwtSetting", "issuer" }),
                     ValidateAudience = true,
-                    ValidAudience = AppSettings.app(new string[] {"AppSettings", "JwtSetting", "audience"}),
+                    ValidAudience = AppSettings.app(new string[] { "AppSettings", "JwtSetting", "audience" }),
                     ValidateLifetime = true,
                     IssuerSigningKey = new SymmetricSecurityKey(secretByte)
                 };
@@ -51,14 +51,14 @@ namespace WebApiBase
             //Swagger配置
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo {Title = "WebApiBase", Version = "v1"});
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "WebApiBase", Version = "v1" });
                 c.OrderActionsBy(o => o.RelativePath);
             });
             services.AddAutoMapper(typeof(Startup));
             //添加cors 服务
             services.AddCors(options =>
-                options.AddPolicy(AppSettings.app(new string[] {"AppSettings", "Cors", "Name"}),
-                    p => p.WithOrigins(AppSettings.app(new string[] {"AppSettings", "Cors", "Original"}))
+                options.AddPolicy(AppSettings.app(new string[] { "AppSettings", "Cors", "Name" }),
+                    p => p.WithOrigins(AppSettings.app(new string[] { "AppSettings", "Cors", "Original" }))
                         .AllowAnyMethod().AllowAnyHeader()));
             //注入Message类
             services.AddSingleton<Message>();
@@ -83,7 +83,7 @@ namespace WebApiBase
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "WebApiBase v1"));
             }
 
-            app.UseCors(AppSettings.app(new string[] {"AppSettings", "Cors", "Name"}));
+            app.UseCors(AppSettings.app(new string[] { "AppSettings", "Cors", "Name" }));
             app.UseHttpsRedirection();
             //路由
             app.UseRouting();

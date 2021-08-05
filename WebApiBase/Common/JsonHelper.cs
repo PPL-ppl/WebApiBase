@@ -19,7 +19,7 @@ namespace WebApiBase.Common
         //取Json数据中的字段数据
         public static string toStr(string end, string start)
         {
-            Object obj = Newtonsoft.Json.JsonConvert.DeserializeObject(end);
+            Object obj = Newtonsoft.Json.JsonConvert.DeserializeObject(start);
             Newtonsoft.Json.Linq.JObject js = obj as Newtonsoft.Json.Linq.JObject;
             var result = js[end].ToString();
             return result;
