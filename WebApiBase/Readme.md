@@ -1,6 +1,7 @@
 # Readme
 
 ## 目录结构
+跳过SSL认证 git config --global http.sslVerify "false"
 Common-公共文件
 ~~~
 BaseController.cs：自定义路由模版
