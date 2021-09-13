@@ -7,7 +7,7 @@ namespace WebApiBase.Common
     /// </summary>
     [Route("api/[controller]/[action]")]
     [ApiController]
-    public class BaseController : Controller
+    public class BaseController : ControllerBase
     {
     }
 }

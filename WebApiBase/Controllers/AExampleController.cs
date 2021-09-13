@@ -10,7 +10,7 @@ namespace WebApiBase.Controllers
         public string GetSte()
         {
             string str1 = "56311F31";
-          StringConversionHelper.S16ConversionStr(str1);
+            StringConversionHelper.S16ConversionStr(str1);
             string str2 = "E58898E68CAFE88BB1";
             StringConversionHelper.S16ConversionChinese(str2);
             string strData1 = "V1,1";
