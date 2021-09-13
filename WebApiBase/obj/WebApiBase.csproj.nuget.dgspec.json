@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "G:\\文档\\GitHub\\WebApiBase\\WebApiBase\\WebApiBase.csproj": {}
+    "G:\\C#代码\\WebApiBase\\WebApiBase\\WebApiBase.csproj": {}
   },
   "projects": {
-    "G:\\文档\\GitHub\\WebApiBase\\WebApiBase\\WebApiBase.csproj": {
+    "G:\\C#代码\\WebApiBase\\WebApiBase\\WebApiBase.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\文档\\GitHub\\WebApiBase\\WebApiBase\\WebApiBase.csproj",
+        "projectUniqueName": "G:\\C#代码\\WebApiBase\\WebApiBase\\WebApiBase.csproj",
         "projectName": "WebApiBase",
-        "projectPath": "G:\\文档\\GitHub\\WebApiBase\\WebApiBase\\WebApiBase.csproj",
+        "projectPath": "G:\\C#代码\\WebApiBase\\WebApiBase\\WebApiBase.csproj",
         "packagesPath": "C:\\Users\\WZL\\.nuget\\packages\\",
-        "outputPath": "G:\\文档\\GitHub\\WebApiBase\\WebApiBase\\obj\\",
+        "outputPath": "G:\\C#代码\\WebApiBase\\WebApiBase\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet"
