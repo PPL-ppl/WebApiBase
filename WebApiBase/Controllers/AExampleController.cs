@@ -17,6 +17,7 @@ namespace WebApiBase.Controllers
             StringConversionHelper.StrConversion16(strData1);
             string strData2 = "刘振英";
             StringConversionHelper.ChineseConversion16(strData2);
+            Console.WriteLine(strData2);
             return strData2;
         }
     }
