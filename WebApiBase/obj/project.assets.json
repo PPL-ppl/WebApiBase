@@ -7305,19 +7305,19 @@
   },
   "packageFolders": {
     "C:\\Users\\WZL\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet": {}
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\C#代码\\Github\\WebApiBase\\WebApiBase\\WebApiBase.csproj",
+      "projectUniqueName": "G:\\C#代码\\码云\\csharp\\WebApiBase\\WebApiBase.csproj",
       "projectName": "WebApiBase",
-      "projectPath": "G:\\C#代码\\Github\\WebApiBase\\WebApiBase\\WebApiBase.csproj",
+      "projectPath": "G:\\C#代码\\码云\\csharp\\WebApiBase\\WebApiBase.csproj",
       "packagesPath": "C:\\Users\\WZL\\.nuget\\packages\\",
-      "outputPath": "G:\\C#代码\\Github\\WebApiBase\\WebApiBase\\obj\\",
+      "outputPath": "G:\\C#代码\\码云\\csharp\\WebApiBase\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet"
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
         "C:\\Users\\WZL\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ovUw7hCriQmBOMtDlvje6RcRWfogxH5XymNR1xHQSRkw/VhQCN/O/hdLY+AM2xZYnBYEgPdWM78QNLeCZ+B05Q==",
+  "dgSpecHash": "/GArv8PjObOZgnFSuGEyUPjiND6d/m1v61IDJ+DSbHXB/TC7qomDg5VT2cVO9jblg9hivixJYNUvo+Q+n9ODAA==",
   "success": true,
-  "projectFilePath": "G:\\C#代码\\Github\\WebApiBase\\WebApiBase\\WebApiBase.csproj",
+  "projectFilePath": "G:\\C#代码\\码云\\csharp\\WebApiBase\\WebApiBase.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\WZL\\.nuget\\packages\\autofac\\6.0.0\\autofac.6.0.0.nupkg.sha512",
     "C:\\Users\\WZL\\.nuget\\packages\\autofac.extensions.dependencyinjection\\7.1.0\\autofac.extensions.dependencyinjection.7.1.0.nupkg.sha512",
