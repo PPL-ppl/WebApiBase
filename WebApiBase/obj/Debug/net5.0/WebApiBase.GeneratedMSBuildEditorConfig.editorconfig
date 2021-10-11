@@ -7,4 +7,4 @@ build_property.PublishSingleFile =
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
 build_property.RootNamespace = WebApiBase
-build_property.ProjectDir = G:\C#代码\WebApiBase\WebApiBase\
+build_property.ProjectDir = G:\C#代码\码云\csharp\WebApiBase\
